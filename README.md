@@ -39,12 +39,12 @@ Just run predictRankings.Rproj
 
 # Thanks
 
- * Vincent Terrasi
- * Remi Bacha
+ * Vincent Terrasi : @vincentterrasi
+ * Remi Bacha : @Remibacha
  * Sylvain Peyronnet
  * Oliver Nicols
- * Cedric : Ranxplorer
- * Jérôme : Visiblis
+ * Cedric : Ranxplorer : http://www.ranxplorer.com
+ * JÃ©rÃ´me : Visiblis : http://www.visiblis.com
  
 # License
  
