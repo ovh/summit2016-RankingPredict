@@ -1,4 +1,4 @@
-summit2016-predictGRankings-examples 
+summit2016-RankingPredict
 
 It is just an R example project for OVH Summit 2016.
 We have optimised an xgboost algorithm which can predict whether a site will end up in the top 10 sites ranked by Google for a certain search term. ( AUC 0.92 )
@@ -24,7 +24,7 @@ Just run predictRankings.Rproj
 ## Get the sources
  
 ```bash
-    git clone https://github.com/ovh/summit2016-predictGRankings-examples.git
+    git clone https://github.com/ovh/summit2016-RankingPredict.git
     cd summit2016-predictGRankings-examples
 ```
  
@@ -32,8 +32,8 @@ Just run predictRankings.Rproj
 
 # Related links
  
- * Contribute: https://github.com/ovh/summit2016-predictGRankings-examples
- * Report bugs: https://github.com/ovh/summit2016-predictGRankings-examples/issues
+ * Contribute: https://github.com/ovh/summit2016-RankingPredict
+ * Report bugs: https://github.com/ovh/summit2016-RankingPredict/issues
  * Get latest version: v1.0.0
 
 
@@ -48,4 +48,4 @@ Just run predictRankings.Rproj
  
 # License
  
-See https://github.com/ovh/summit2016-predictGRankings-examples/blob/master/LICENSE
+See https://github.com/ovh/summit2016-RankingPredict/blob/master/LICENSE
