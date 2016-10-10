@@ -1,7 +1,6 @@
-# Contributing to summit2016-predictGRankings-examples
+# Contributing to summit2016-RankingPredict
  
-This project accepts contributions. In order to contribute, you should
-pay attention to a few things:
+This project accepts contributions. In order to contribute, you should pay attention to a few things:
  
 1. your code must follow the coding style rules
 2. your code must be unit-tested
