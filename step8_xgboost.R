@@ -8,6 +8,8 @@ library(clusterSim)
 library(Ckmeans.1d.dp)
 library(pROC)
 library(SDMTools)
+library(openssl)
+library(httr)
 
 set.seed(123)
 
@@ -16,10 +18,27 @@ datasetXg <- read.csv2("./dataset/dataset-cleaned.csv",stringsAsFactors=FALSE,he
 #cleansing
 datasetXg <- filter(datasetXg, Visiblis_Page>0 & Visiblis_Title>0 )
 
+
+#datasetXg$Https <-  as.list(download_ssl_cert(datasetXg$URL, 443))$subject
+
 datasetXg$Https <- 0
 datasetXg$Https[which(grepl("https",datasetXg$URL))] <- 1
 
+datasetXg$EV <- 0
+indexHttps <- which(grepl("https",datasetXg$URL))
+
+source("./step9_getInfoSSL.R")
+
+for (i in 1:length(indexHttps)) {
+  
+  host <- parse_url(datasetXg$URL[i])$hostname
+  print(host)
+  datasetXg$EV <- detectSSL(host)
+  
+}
+
 #create training dataset
+
 datasetMat <- dplyr::select(datasetXg
                             #,Text.Ratio
                             ,Word.Count
@@ -35,6 +54,7 @@ datasetMat <- dplyr::select(datasetXg
                             ,RefDomains
                             ,ExtBackLinks
                             ,Https
+                            ,EV
 )
 
 datasetMat$Visiblis_Page <- as.numeric(datasetMat$Visiblis_Page)
