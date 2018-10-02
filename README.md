@@ -1,5 +1,6 @@
 > This repository is no longer maintained, and deprecated.
- summit2016-RankingPredict
+
+summit2016-RankingPredict
 
 It is just an R example project for OVH Summit 2016.
 We have optimised an xgboost algorithm which can predict whether a site will end up in the top 10 sites ranked by Google for a certain search term. ( AUC 0.92 )
